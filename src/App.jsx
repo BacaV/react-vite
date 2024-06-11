@@ -3,6 +3,8 @@ import Footer from './Footer.jsx'
 import Food from './Food.jsx'
 import Card from './Card.jsx'
 import './styles/App.css'
+import Button from './Button.jsx'
+import Student from "./Student.jsx";
 
 function App() {
 
@@ -11,8 +13,12 @@ function App() {
       <>
         <Header />
         <Food />
+        <Student name="SundjerBob" age={30} isStudent={true} />
+        <Student name="Patrik" age={40} isStudent={false} />
+        <Student/>
         <Card />
         <Card />
+        <Button />
         <Footer />
       </>
     );
