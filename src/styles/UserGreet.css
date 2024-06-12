@@ -1,0 +1,19 @@
+.welcome-msg{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    text-align: center;
+}
+
+.login-msg{
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    text-align: center;
+}

@@ -5,6 +5,7 @@ import Card from './Card.jsx'
 import './styles/App.css'
 import Button from './Button.jsx'
 import Student from "./Student.jsx";
+import UserGreet from './UserGreet.jsx'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <>
         <Header />
         <Food />
+        <UserGreet isLoggedIn={true} username='Nikola' />
         <Student name="SundjerBob" age={30} isStudent={true} />
         <Student name="Patrik" age={40} isStudent={false} />
         <Student/>
