@@ -6,8 +6,20 @@ import './styles/App.css'
 import Button from './Button.jsx'
 import Student from "./Student.jsx";
 import UserGreet from './UserGreet.jsx'
+import List from './List.jsx'
 
 function App() {
+
+  const fruits= [{name: "apple", calories: 95},
+                {name: "orange", calories: 45},
+                {name: "banana", calories: 105},
+                {name: "grape", calories: 159}];
+
+  const vegetables= [{name: "onion", calories: 235},
+                    {name: "cucumber", calories: 25},
+                    {name: "tomato", calories: 65},
+                    {name: "potato", calories: 159}];
+
 
 
     return(
@@ -18,6 +30,8 @@ function App() {
         <Student name="SundjerBob" age={30} isStudent={true} />
         <Student name="Patrik" age={40} isStudent={false} />
         <Student/>
+        {fruits.lenght > 0 ? <List items={fruits} category="Fruits" /> : null}
+        {fruits.lenght > 0 ? <List items={vegetables} category="Vegetables"/> : null}
         <Card />
         <Card />
         <Button />
