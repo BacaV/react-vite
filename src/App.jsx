@@ -1,12 +1,14 @@
+import './styles/App.css'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import Food from './Food.jsx'
 import Card from './Card.jsx'
-import './styles/App.css'
 import Button from './Button.jsx'
 import Student from "./Student.jsx";
 import UserGreet from './UserGreet.jsx'
 import List from './List.jsx'
+import ProfilePic from './ProfilePic.jsx' 
+
 
 function App() {
 
@@ -34,6 +36,7 @@ function App() {
         {fruits.lenght > 0 ? <List items={vegetables} category="Vegetables"/> : null}
         <Card />
         <Card />
+        <ProfilePic />
         <Button />
         <Footer />
       </>
