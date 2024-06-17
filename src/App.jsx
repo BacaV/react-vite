@@ -8,6 +8,8 @@ import Student from "./Student.jsx";
 import UserGreet from './UserGreet.jsx'
 import List from './List.jsx'
 import ProfilePic from './ProfilePic.jsx' 
+import MyComponent from './MyComponent.jsx'
+
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
     return(
       <>
         <Header />
+        <MyComponent/>
         <Food />
         <UserGreet isLoggedIn={true} username='Nikola' />
         <Student name="SundjerBob" age={30} isStudent={true} />
