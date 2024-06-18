@@ -11,11 +11,11 @@ function MyComponent(){
     }
 
     let incrementAge = () => {
-        setAge(age + 1);
+        setAge(a => a + 1);
     }
 
     let decrementAge = () => {
-        setAge(age - 1)
+        setAge(a => a - 1)
     }
 
     let employmentStatus = () => {
