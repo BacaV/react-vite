@@ -9,6 +9,7 @@ import UserGreet from './UserGreet.jsx'
 import List from './List.jsx'
 import ProfilePic from './ProfilePic.jsx' 
 import MyComponent from './MyComponent.jsx'
+import OnChange from './OnChange.jsx'
 
 
 
@@ -30,6 +31,7 @@ function App() {
       <>
         <Header />
         <MyComponent/>
+        <OnChange />
         <Food />
         <UserGreet isLoggedIn={true} username='Nikola' />
         <Student name="SundjerBob" age={30} isStudent={true} />
