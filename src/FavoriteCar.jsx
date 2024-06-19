@@ -2,34 +2,55 @@ import { useState } from "react";
 
 function FavoriteCar(){
 
-    const [car, setCar] = useState({year: 2024, make: "Audi", model: "Rs7"});
+    const [cars, setCars] = useState([]);
+    const [carYear, setCarYear] = useState(new Date().getFullYear());
+    const [carMake, setCarMake] = useState("");
+    const [carModel, setCarModel] = useState("");
 
+    function handleAddCar(){
+        const newCar = {year: carYear, make: carMake, model: carModel };
 
-    function handleYear(e){
-        setCar(c => ({...c, year: e.target.value}))
+        setCars(cars => [...cars, newCar]);
+
+        setCarMake("");
+        setCarModel("");
+        setCarYear(new Date().getFullYear());
     }
 
-    function handleMake(e){
-        setCar(c => ({...c, make: e.target.value}))
+    function handleRemoveCar(index){
+
+        cars.filter((_,i) => i !== index);
     }
 
-    function handleModel(e){
-        setCar(c => ({...c, model: e.target.value}))
+    function handleYearChange(e){
+        setCarYear(e.target.value);
     }
+
+    function handleMakeChange(e){
+        setCarMake(e.target.value);
+    }
+
+    function handleModelChange(e){
+        setCarModel(e.target.value);
+    }
+
+
+
 
     return(
         <>
-        <div>
-            Year: <input type="number" value={car.year} onChange={handleYear} /> <br /><br />
-            Make: <input type="text" value={car.make} onChange={handleMake} /> <br /><br />
-            Model: <input type="text" value={car.model} onChange={handleModel} /> <br /><br />
+         <h2>List of Car Objects</h2>
 
-            <p>Your favorite car is: {car.year} {car.make} {car.model}</p>
-        </div>
+         <ul>
+            {cars.map((car, index) => <li onClick={handleRemoveCar} key={index}>{car.year} {car.make} {car.model}</li>)}
+         </ul>
 
+         <input type="number" onChange={handleYearChange} value={carYear} id="year" /> <br /> <br />
+         <input type="text" onChange={handleMakeChange} value={carMake} placeholder="car make" id="make" /> <br /> <br />
+         <input type="text" onChange={handleModelChange} value={carModel} placeholder="car model" id="model" /> <br /> <br />
+         <button onClick={handleAddCar}>Add car</button>
         </>
-    )
-
+    );
 }
 
 export default FavoriteCar
