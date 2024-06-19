@@ -19,7 +19,7 @@ function FavoriteCar(){
 
     function handleRemoveCar(index){
 
-        cars.filter((_,i) => i !== index);
+        setCars(cars => cars.filter((_,i) => i !== index))
     }
 
     function handleYearChange(e){
@@ -42,7 +42,7 @@ function FavoriteCar(){
          <h2>List of Car Objects</h2>
 
          <ul>
-            {cars.map((car, index) => <li onClick={handleRemoveCar} key={index}>{car.year} {car.make} {car.model}</li>)}
+            {cars.map((car, index) => <li onClick={() => handleRemoveCar(index)} key={index}>{car.year} {car.make} {car.model}</li>)}
          </ul>
 
          <input type="number" onChange={handleYearChange} value={carYear} id="year" /> <br /> <br />
