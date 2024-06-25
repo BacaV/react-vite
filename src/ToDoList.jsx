@@ -44,6 +44,8 @@ function ItemElement(props){
         <>
         <div>
             <p>{itemValue}</p>
+            <button>^</button>
+            <button></button>
         </div>
         </>
     )
