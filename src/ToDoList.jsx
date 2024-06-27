@@ -31,6 +31,10 @@ function InputElement(){
             <input type="text" value={item} id="listInput" onChange={handleListChange} placeholder="Enter list item" />
             <button onClick={handleListAdd}></button>
         </div>
+
+        {
+            
+        }
         <ItemElement value={itemList[0]} />
         </>
     )
@@ -44,8 +48,9 @@ function ItemElement(props){
         <>
         <div>
             <p>{itemValue}</p>
-            <button>^</button>
-            <button></button>
+            <button>Delete</button>
+            <button>Up</button>
+            <button>Down</button>
         </div>
         </>
     )
