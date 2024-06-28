@@ -15,39 +15,40 @@ function ToDoList(){
 function InputElement(){
 
     const [itemList, setItemList] = useState([]);
-    const [item, setItem] = useState("");
-
-    function handleListChange(e){
-        setItem(e.target.value);
-    }
 
     function handleListAdd(){
-        setItemList(item);
+        const newItem = document.getElementById("listInput").value;
+        document.getElementById("listInput").value = "";
+
+        console.log(newItem)
+
+        setItemList(i =>[...i, newItem]);
     }
 
     return(
         <>
         <div>
-            <input type="text" value={item} id="listInput" onChange={handleListChange} placeholder="Enter list item" />
-            <button onClick={handleListAdd}></button>
+            <input type="text" id="listInput" placeholder="Enter list item" />
+            <button onClick={handleListAdd}>Add</button>
         </div>
 
-        {
-            
-        }
-        <ItemElement value={itemList[0]} />
+       
+            {itemList.forEach(item => {
+                <ItemElement value={item} />
+                console.log("asas")
+            })}
         </>
     )
 }
 
 function ItemElement(props){
 
-    const itemValue = props.value;
+    const value = props.value;
 
     return(
         <>
         <div>
-            <p>{itemValue}</p>
+            <p>{value}</p>
             <button>Delete</button>
             <button>Up</button>
             <button>Down</button>
