@@ -2,60 +2,53 @@ import { useState } from "react";
 
 function ToDoList(){
 
-    return( 
-        <>
-        <h2>To do list</h2>
-        <InputElement />
-        </>
-        
+    const [ list, setList] = useState(["Default", "Values"]);
+    const [ item, setItem ] = useState("");
 
-    );
-}
+    function handleAdd(){
+        setList([...list, item]);
+        setItem("");
+    }
 
-function InputElement(){
+    function handleRemove(i){
 
-    const [itemList, setItemList] = useState([]);
+    }
 
-    function handleListAdd(){
-        const newItem = document.getElementById("listInput").value;
-        document.getElementById("listInput").value = "";
+    function handleUp(i){
 
-        console.log(newItem)
+    }
 
-        setItemList(i =>[...i, newItem]);
+    function handleDown(i){
+
+    }
+
+    function handleChange(e){
+        setItem(e.target.value)
     }
 
     return(
         <>
-        <div>
-            <input type="text" id="listInput" placeholder="Enter list item" />
-            <button onClick={handleListAdd}>Add</button>
-        </div>
+            <h2>To Do List</h2>
 
-       
-            {itemList.forEach(item => {
-                <ItemElement value={item} />
-                console.log("asas")
-            })}
+            <input type="text" id="input" value={item} onChange={handleChange} />
+            <button className="add-btn" onClick={handleAdd}>Add</button>
+
+            <ul>
+                {
+                    list.map((task, index) => 
+                        <li key={index}>
+                            <span className="task-text">{task}</span>
+                            <button className="delete-btn" onClick={handleRemove}>Delete</button>
+                            <div className="up-down-wrapper">
+                                <button className="up-btn" onClick={handleUp}>Up</button>
+                                <button className="down-btn" onClick={handleDown}>Down</button>
+                            </div>
+                        </li>
+                    )
+                }
+            </ul>
         </>
     )
 }
-
-function ItemElement(props){
-
-    const value = props.value;
-
-    return(
-        <>
-        <div>
-            <p>{value}</p>
-            <button>Delete</button>
-            <button>Up</button>
-            <button>Down</button>
-        </div>
-        </>
-    )
-}
-
 
 export default ToDoList;
