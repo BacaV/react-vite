@@ -1,0 +1,115 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    color: white;
+    size: 50px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+}
+
+input{
+    margin: 5px 10px;
+    width: 75%;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.add-btn{
+    width: 15%;
+    margin: 0;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.delete-btn{
+    margin: 0;
+    background-color: red;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    height: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.up-btn{
+    margin: 0;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    height: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.down-btn{
+    margin: 0;
+    background-color: orange;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    height: 20px; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.up-down-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-wrapper{
+    width: 100%;
+    position: relative;
+}
+
+li{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+.task-text{
+    width: 50%;
+    color: black;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
