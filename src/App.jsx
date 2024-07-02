@@ -12,6 +12,7 @@ import MyComponent from './MyComponent.jsx';
 import OnChange from './OnChange.jsx';
 import ColorPicker from './ColorPicker.jsx';
 import FavoriteCar from './FavoriteCar.jsx';
+import UseEffect from './UseEffect.jsx';
 
 
 
@@ -32,6 +33,7 @@ function App() {
     return(
       <>
         <Header />
+        <UseEffect/>
         <MyComponent/>
         <OnChange />
         <Food />
