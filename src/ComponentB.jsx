@@ -1,13 +1,15 @@
+import ComponentC from "./ComponentC";
 
-function ComponentA(){
+function ComponentB(){
 
     return(
         <>
             <div className="box">
                 <h1>ComponentB</h1>
+                <ComponentC/>
             </div>
         </>
     )
 }
 
-export default ComponentA;
+export default ComponentB;

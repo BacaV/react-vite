@@ -13,6 +13,7 @@ import OnChange from './OnChange.jsx';
 import ColorPicker from './ColorPicker.jsx';
 import FavoriteCar from './FavoriteCar.jsx';
 import UseEffect from './UseEffect.jsx';
+import ComponentA from './ComponentA.jsx';
 
 
 
@@ -33,6 +34,7 @@ function App() {
     return(
       <>
         <Header />
+        <ComponentA/>
         <UseEffect/>
         <MyComponent/>
         <OnChange />
