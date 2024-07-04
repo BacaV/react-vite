@@ -14,6 +14,7 @@ import ColorPicker from './ColorPicker.jsx';
 import FavoriteCar from './FavoriteCar.jsx';
 import UseEffect from './UseEffect.jsx';
 import ComponentA from './ComponentA.jsx';
+import UseRef from './UseRef.jsx';
 
 
 
@@ -34,6 +35,7 @@ function App() {
     return(
       <>
         <Header />
+        <UseRef/>
         <ComponentA/>
         <UseEffect/>
         <MyComponent/>
